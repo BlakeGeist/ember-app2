@@ -1,0 +1,24 @@
+<div class="campgrounds">
+  <section class="campgrounds-section">
+    {{#if screen.isDesktop}}
+      {{campgrounds-list}}
+    {{/if}}
+    <div class="campground">
+      <div class="campground-info">
+        <h1 class="campground-info-heading">{{model.name}}</h1>
+
+        <div clas="image">
+          {{#if model.image}}
+            <img src="{{model.image}}" width="100%" />
+          {{else}}
+            There is not an image, TODO: create a placeholder image
+          {{/if}}
+        </div>
+        <div class="campground-info-admin-tools">
+          <div class="campground-info-admin-tools-item mod-edit">{{#link-to "campgrounds.edit" model}}:edit{{/link-to}}</div>
+          <div class="campground-info-admin-tools-item mod-edit"><button {{action "destroyCampground" model}}>Delete</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,17 @@
+<div class="mobile-menu">
+
+  <div class="mobile-menu-item">
+    <a href="" {{action "toggleOpen" preventDefault=true}}>Mobile Menu</a>
+  </div>
+
+  {{#if screen.isMobile}}
+
+    {{#if isExpanded}}
+
+      {{campgrounds-list sendDataToParent=(action 'sendDataToParent')}}
+
+    {{/if}}
+
+  {{/if}}
+
+</div>

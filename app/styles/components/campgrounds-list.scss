@@ -1,0 +1,11 @@
+.campgrounds-list{
+  border-right: 1px solid #ccc;
+  padding: 0 15px;
+  flex: 0 0 250px;
+}
+
+@media(max-width: 414px){
+  .campgrounds-list{
+    border: none;
+  }
+}

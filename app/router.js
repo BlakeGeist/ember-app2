@@ -7,6 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('campgrounds', function() {
+    this.route('show', { path: '/:campground_id' });
+    this.route('new');
+    this.route('edit', { path: '/:campground_id/edit' });
+  });
 });
 
 export default Router;

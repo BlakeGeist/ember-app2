@@ -1,0 +1,11 @@
+
+.campground{
+  flex: 1 1 auto;
+  padding: 0 15px;
+}
+
+@media(max-width: 414px){
+  .campgrounds{
+      margin-top: 40px;
+  }
+}

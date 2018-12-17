@@ -1,0 +1,36 @@
+<div class="campgrounds">
+  <section class="campgrounds-section">
+    {{campgrounds-list}}
+    <div class="campground">
+      <div class="campground-info">
+        <h1 class="campground-info-heading">{{model.name}}</h1>
+        <div class="campground-info-admin-tools">
+          <div class="campground-info-admin-tools-item mod-edit">{{#link-to "campgrounds.edit" model}}:edit{{/link-to}}</div>
+          <div class="campground-info-admin-tools-item mod-edit"><button {{action "destroyCampground" model}}>Delete</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{{#modal-dialog
+  translucentOverlay=true
+  onClose=(action "navToCampground" model)
+}}
+  <div class="modal">
+    <div class="modal-heading">Edit Campground</div>
+    <form class="modal-form" method="post" {{action "submitEdit" model on="submit"}}>
+      <div class="modal-form-inputs">
+        {{input class="modal-form-buttons-button mod-input" type="text" value=model.name placeholder="Campground Name..." name="name"}}
+        {{input class="modal-form-buttons-button mod-input" type="text" value=model.image placeholder="img src..." name="image"}}
+      </div>
+      <div class="modal-form-buttons">
+
+        <button {{action "navToCampground" model}}>Cancel</button>
+        <button {{action "destroyCampground" model}}>Delete</button>
+
+        {{input class="modal-form-buttons-button mod-submit" type="submit" value="Submit"}}
+      </div>
+    </form>
+  </div>
+{{/modal-dialog}}
