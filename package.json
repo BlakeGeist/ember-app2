@@ -55,6 +55,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
+    "ember-cli-string-helpers": "^2.0.0",
     "ember-screen": "^1.0.0"
   }
 }

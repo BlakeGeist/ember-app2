@@ -6,14 +6,14 @@
   {{#unless campground.isNew}}
     {{#if screen.isMobile}}
       <div class="campgrounds-list-item" {{action "sendDataToParent"}}>
-        {{#link-to "campgrounds.show" campground}}
-          {{campground.name}}
+        {{#link-to "campgrounds.show" campground class="campgrounds-list-item-link"}}
+          {{titleize campground.name}}
         {{/link-to}}
       </div>
     {{else}}
       <div class="campgrounds-list-item">
-        {{#link-to "campgrounds.show" campground }}
-          {{campground.name}}
+        {{#link-to "campgrounds.show" campground class="campgrounds-list-item-link"}}
+          {{titleize campground.name}}
         {{/link-to}}
       </div>
     {{/if}}
@@ -21,5 +21,5 @@
 {{/each}}
 
 <div class="campgrounds-list-item mod-add" {{action "sendDataToParent"}}>
-  {{#link-to "campgrounds.new"}}Add [+]{{/link-to}}
+  {{#link-to "campgrounds.new" class="campgrounds-list-item-link"}}Add [+]{{/link-to}}
 </div>
