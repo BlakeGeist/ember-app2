@@ -12,12 +12,33 @@
     <form class="modal-form" method="post" {{action "addNew" on="submit"}}>
       <div class="modal-form-inputs">
         <div class="modal-form-heading">Add New Campground</div>
-        {{input class="modal-form-buttons-button mod-input" type="text" value=campground.name placeholder="Campground Name..." name="name"}}
-        {{input class="modal-form-buttons-button mod-input" type="text" value=campground.image placeholder="img src..." name="image"}}
+        {{input
+          class="modal-form-buttons-button mod-input"
+          type="text"
+          value=campground.name
+          placeholder="Campground Name..."
+          name="name"
+        }}
+        {{input
+          class="modal-form-buttons-button mod-input"
+          type="text"
+          value=campground.image
+          placeholder="img src..."
+          name="image"
+        }}
       </div>
       <div class="modal-form-buttons">
-        <input class="modal-form-buttons-button mod-cancel" type="button" value="Cancel" {{action "navToCampgrounds"}}/>
-        {{input class="modal-form-buttons-button mod-submit" type="submit" value="Add"}}
+        <input
+          class="modal-form-buttons-button mod-cancel"
+          type="button"
+          value="Cancel"
+          {{action "navToCampgrounds"}}
+        >
+        {{input
+          class="modal-form-buttons-button mod-submit"
+          type="submit"
+          value="Add"
+        }}
       </div>
     </form>
   </div>

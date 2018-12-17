@@ -1,10 +1,12 @@
 import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   classNames: ["campgrounds-list"],
-  screen: Ember.inject.service(),
-  store: Ember.inject.service(),
-  campgrounds: Ember.computed( function () {
+  screen: service('screen'),
+  store: service('store'),
+  campgrounds: computed( function () {
     return this.store.findAll('campground');
   }),
   actions: {

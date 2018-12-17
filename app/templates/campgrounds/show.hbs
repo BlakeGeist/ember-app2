@@ -9,7 +9,7 @@
 
         <div clas="image">
           {{#if model.image}}
-            <img src="{{model.image}}" width="100%" />
+            <img src={{model.image}} alt="Image of {{model.name}}" width="100%">
           {{else}}
             There is not an image, TODO: create a placeholder image
           {{/if}}

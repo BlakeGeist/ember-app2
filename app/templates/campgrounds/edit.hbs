@@ -19,17 +19,35 @@
 }}
   <div class="modal">
     <div class="modal-heading">Edit Campground</div>
-    <form class="modal-form" method="post" {{action "submitEdit" model on="submit"}}>
+    <form
+      class="modal-form"
+      method="post"
+      {{action "submitEdit" model on="submit"}}
+    >
       <div class="modal-form-inputs">
-        {{input class="modal-form-buttons-button mod-input" type="text" value=model.name placeholder="Campground Name..." name="name"}}
-        {{input class="modal-form-buttons-button mod-input" type="text" value=model.image placeholder="img src..." name="image"}}
+        {{input
+          class="modal-form-buttons-button mod-input"
+          type="text"
+          value=model.name
+          placeholder="Campground Name..."
+          name="name"
+        }}
+        {{input
+          class="modal-form-buttons-button mod-input"
+          type="text"
+          value=model.image
+          placeholder="img src..."
+          name="image"
+        }}
       </div>
       <div class="modal-form-buttons">
-
         <button {{action "navToCampground" model}}>Cancel</button>
         <button {{action "destroyCampground" model}}>Delete</button>
-
-        {{input class="modal-form-buttons-button mod-submit" type="submit" value="Submit"}}
+        {{input
+          class="modal-form-buttons-button mod-submit"
+          type="submit"
+          value="Submit"
+        }}
       </div>
     </form>
   </div>

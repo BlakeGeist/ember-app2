@@ -1,7 +1,8 @@
 import Component from '@ember/component';
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
-  screen: Ember.inject.service(),
+  screen: service('screen'),
   isExpanded: false,
   actions: {
     toggleOpen(){

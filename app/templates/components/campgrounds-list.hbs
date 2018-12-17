@@ -1,11 +1,10 @@
 <h1 class="campgrounds-list-heading">
   {{#link-to "campgrounds"}}List of campgrounds{{/link-to}}
 </h1>
-
 {{#each campgrounds as |campground|}}
   {{#unless campground.isNew}}
     {{#if screen.isMobile}}
-      <div class="campgrounds-list-item" {{action "sendDataToParent"}}>
+      <div class="campgrounds-list-item" {{action "sendDataToParent"}} role="button">
         {{#link-to "campgrounds.show" campground class="campgrounds-list-item-link"}}
           {{titleize campground.name}}
         {{/link-to}}
@@ -19,7 +18,10 @@
     {{/if}}
   {{/unless}}
 {{/each}}
-
-<div class="campgrounds-list-item mod-add" {{action "sendDataToParent"}}>
+<div
+  class="campgrounds-list-item mod-add"
+  role="button"
+  {{action "sendDataToParent"}}
+>
   {{#link-to "campgrounds.new" class="campgrounds-list-item-link"}}Add [+]{{/link-to}}
 </div>

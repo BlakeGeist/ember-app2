@@ -1,7 +1,8 @@
 import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend({
-  screen: Ember.inject.service(),
+  screen: service('screen'),
   actions: {
     destroyCampground(campground){
       campground.destroyRecord()
